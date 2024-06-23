@@ -19,7 +19,7 @@
             margin: 0 auto;
         }
         header {
-            padding: 20px 0;
+            padding: 40px 0 10px;
             position: sticky;
             top: 0;
             background-color: #FFC700;
@@ -34,31 +34,59 @@
             margin: 0;
             font-size: 2.5em;
             font-weight: 300;
+            line-height: 1;
         }
-        .logo p {
-            margin: 0;
+        .subheading {
+            margin: 5px 0 0;
             font-size: 1.2em;
             font-weight: 300;
+            text-align: left;
         }
         nav ul {
             list-style-type: none;
             padding: 0;
+            margin: 0;
+            display: flex;
         }
         nav ul li {
-            display: inline;
             margin-left: 20px;
         }
         nav ul li a {
             text-decoration: none;
             color: black;
-            font-weight: 400;
+            font-weight: 300;
         }
         main {
             padding: 40px;
-            text-align: center;
+        }
+        .main-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .text-content {
+            flex: 1;
+            text-align: left;
+            padding-right: 40px;
+        }
+
+        .image-content {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .circular-image {
+            width: 100%;
+            max-width: 600px;
+            height: auto;
+            border-radius: 50%;
+            object-fit: cover;
+            aspect-ratio: 1 / 1;
         }
         h2 {
-            font-size: 4.5em;
+            font-size: 3.5em;
             font-weight: 300;
             line-height: 1.4;
         }
@@ -72,6 +100,7 @@
         }
         .services-content h2 {
             font-size: 3em;
+            font-weight: 200;
             margin-bottom: 40px;
         }
         .services-columns {
@@ -115,7 +144,6 @@
             <div class="header-content">
                 <div class="logo">
                     <h1>QUVO AI</h1>
-                    <p>Consulting Services</p>
                 </div>
                 <nav>
                     <ul>
@@ -125,13 +153,19 @@
                     </ul>
                 </nav>
             </div>
+            <p class="subheading">Consulting Services</p>
         </div>
     </header>
 
     <main>
-        <div class="container">
-            <h2>We are an AI consulting firm dedicated to helping clients achieve success with Large Language Models (LLMs).</h2>
-            <p>We specialize in building & improving LLM products.</p>
+        <div class="container main-content">
+            <div class="text-content">
+                <h2>We are an AI consulting firm dedicated to helping clients achieve success with Large Language Models (LLMs).</h2>
+                <p>We specialize in building & improving LLM products.</p>
+            </div>
+            <div class="image-content">
+                <img src="images/quvoai-logo.jpeg" alt="QUVO AI Consulting" class="circular-image">
+            </div>
         </div>
     </main>
 
