@@ -1,0 +1,128 @@
+body {
+    font-family: 'Prompt', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #FFC700;
+}
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+header {
+    padding: 40px 0 10px;
+    position: sticky;
+    top: 0;
+    background-color: #FFC700;
+    z-index: 1000;
+}
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo h1 {
+    margin: 0;
+    font-size: 2.5em;
+    font-weight: 300;
+    line-height: 1;
+}
+.subheading {
+    margin: 5px 0 0;
+    font-size: 1.2em;
+    font-weight: 300;
+    text-align: left;
+}
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+nav ul li {
+    margin-left: 20px;
+}
+nav ul li a {
+    text-decoration: none;
+    color: black;
+    font-weight: 300;
+}
+main {
+    padding: 40px;
+}
+.main-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.text-content {
+    flex: 1;
+    text-align: left;
+    padding-right: 40px;
+}
+
+.image-content {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.circular-image {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    border-radius: 50%;
+    object-fit: cover;
+    aspect-ratio: 1 / 1;
+}
+h2 {
+    font-size: 3.5em;
+    font-weight: 300;
+    line-height: 1.4;
+}
+.container p {
+    font-size: 1.6em;
+    font-weight: 200;
+}
+#services {
+    background-color: #FFF8E1;
+    padding: 60px 0;
+}
+.services-content h2 {
+    font-size: 3em;
+    font-weight: 200;
+    margin-bottom: 40px;
+}
+.services-columns {
+    display: flex;
+    justify-content: space-between;
+    text-align: left;
+}
+.service-column {
+    flex-basis: 30%;
+}
+.service-column h3 {
+    font-size: 1.8em;
+    font-weight: 500;
+}
+.service-column ul {
+    padding-left: 20px;
+    font-size: 1.1em;
+    font-weight: 300;
+}
+footer {
+    background-color: #e6e6e6;
+    padding: 40px 0;
+}
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.footer-left, .footer-right {
+    display: flex;
+    flex-direction: column;
+}
+.footer-right > div {
+    margin-bottom: 10px;
+}
