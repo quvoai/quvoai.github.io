@@ -20,6 +20,10 @@
         }
         header {
             padding: 20px 0;
+            position: sticky;
+            top: 0;
+            background-color: #FFC700;
+            z-index: 1000;
         }
         .header-content {
             display: flex;
@@ -52,32 +56,56 @@
         main {
             padding: 40px;
             text-align: center;
-            min-height: calc(100vh - 240px); /* Adjust as needed */
         }
         h2 {
-            font-size: 4.5em; /* Increased font size for h2 */
-            font-weight: 300; /* Adjusted weight to match your style */
-            line-height: 1.4; /* Improved readability for larger text */
+            font-size: 4.5em;
+            font-weight: 300;
+            line-height: 1.4;
         }
         .container p {
             font-size: 1.6em;
             font-weight: 200;
         }
+        #services {
+            background-color: #FFF8E1;
+            padding: 60px 0;
+        }
+        .services-content h2 {
+            font-size: 3em;
+            margin-bottom: 40px;
+        }
+        .services-columns {
+            display: flex;
+            justify-content: space-between;
+            text-align: left;
+        }
+        .service-column {
+            flex-basis: 30%;
+        }
+        .service-column h3 {
+            font-size: 1.8em;
+            font-weight: 500;
+        }
+        .service-column ul {
+            padding-left: 20px;
+            font-size: 1.1em;
+            font-weight: 300;
+        }
         footer {
             background-color: #e6e6e6;
-            padding: 40px 0; /* Increased padding to make footer taller */
+            padding: 40px 0;
         }
         .footer-content {
             display: flex;
             justify-content: space-between;
-            align-items: center; /* Added to vertically center content */
+            align-items: center;
         }
         .footer-left, .footer-right {
             display: flex;
             flex-direction: column;
         }
         .footer-right > div {
-            margin-bottom: 10px; /* Added space between location and contact */
+            margin-bottom: 10px;
         }
     </style>
 </head>
@@ -107,6 +135,45 @@
         </div>
     </main>
 
+    <section id="services">
+        <div class="container services-content">
+            <h2>Services</h2>
+            <div class="services-columns">
+                <div class="service-column">
+                    <h3>Expertise</h3>
+                    <p>We help with:</p>
+                    <ul>
+                        <li>Building domain-specific evaluation systems</li>
+                        <li>Optimizing RAG</li>
+                        <li>Fine-tuning</li>
+                        <li>Creating infrastructure and tooling to help you build faster.</li>
+                        <li>Evaluating and selecting LLM vendors.</li>
+                    </ul>
+                </div>
+                <div class="service-column">
+                    <h3>Solutions</h3>
+                    <p>If you need:</p>
+                    <ul>
+                        <li>LLM solutions for your business.</li>
+                        <li>Your LLMs need to be cheaper or faster.</li>
+                        <li>Help with tools & frameworks.</li>
+                        <li>Outside expertise to evaluate your needs and vet potential talent.</li>
+                    </ul>
+                </div>
+                <div class="service-column">
+                    <h3>Hire Us</h3>
+                    <p>Do you need to:</p>
+                    <ul>
+                        <li>Build LLM capabilities into your business?</li>
+                        <li>Learn how to quickly improve your LLM solutions?</li>
+                        <li>Understand why LLMs are too expensive or slow?</li>
+                        <li>Know how good and reliable your LLMs are?</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <footer>
         <div class="container">
             <div class="footer-content">
@@ -116,16 +183,28 @@
                 </div>
                 <div class="footer-right">
                     <div>
-                        <strong>Location</strong>
-                        <span>Los Angeles, CA</span>
-                    </div>
-                    <div>
                         <strong>Contact</strong>
                         <span>build@quvo.ai</span>
+                    </div>
+                    <div>
+                        <strong>Location</strong>
+                        <span>Los Angeles, CA</span>
                     </div>
                 </div>
             </div>
         </div>
     </footer>
+
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
 </body>
 </html>
