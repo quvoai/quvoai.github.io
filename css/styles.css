@@ -26,6 +26,10 @@ header {
     font-weight: 300;
     line-height: 1;
 }
+.logo a {
+    text-decoration: none;
+    color: inherit; /* This will keep the original text color */
+}
 .subheading {
     margin: 5px 0 0;
     font-size: 1.2em;
@@ -284,4 +288,172 @@ footer {
 }
 .footer-right > div {
     margin-bottom: 10px;
+}
+
+@media screen and (max-width: 768px) {
+    body {
+        font-size: 16px;
+    }
+
+    .container {
+        width: 95%;
+    }
+
+    header {
+        padding: 20px 0 5px;
+    }
+
+    .header-content nav {
+        display: none;
+    }
+
+    .logo h1 {
+        font-size: 2em;
+    }
+
+    .subheading {
+        font-size: 1em;
+    }
+
+    main {
+        padding: 20px 0;
+    }
+
+    .main-content, .about-content, .contact-content {
+        flex-direction: column;
+    }
+
+    .text-content, .about-text, .contact-text {
+        padding-right: 0;
+        margin-bottom: 20px;
+    }
+
+    h2 {
+        font-size: 2.5em;
+    }
+
+    .container p {
+        font-size: 1.2em;
+    }
+
+    .services-columns {
+        flex-direction: column;
+    }
+
+    .service-column {
+        margin-bottom: 30px;
+    }
+
+    .circular-image {
+        max-width: 300px;
+    }
+
+    .contact-form .name-fields {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .contact-form .name-fields .form-group {
+        width: 100%;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-left, .footer-right {
+        margin-bottom: 20px;
+    }
+}
+
+.desktop-nav {
+    display: block;
+}
+
+.desktop-nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.desktop-nav ul li {
+    margin-left: 20px;
+}
+
+.desktop-nav ul li a {
+    text-decoration: none;
+    color: black;
+    font-size: 1.1em;
+    font-weight: 300;
+}
+
+.menu-icon {
+    display: none;
+    cursor: pointer;
+    z-index: 1001;
+    position: relative;
+}
+
+.bar1, .bar2, .bar3 {
+    width: 35px;
+    height: 5px;
+    background-color: #333;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
+.full-screen-menu {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    background-color: #FFC700;
+    overflow-x: hidden;
+    transition: 0.5s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.full-screen-menu .menu-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.full-screen-menu a {
+    padding: 15px;
+    text-decoration: none;
+    font-size: 36px;
+    color: #333;
+    display: block;
+    transition: 0.3s;
+    text-align: center;
+}
+
+.full-screen-menu a:hover {
+    color: #f1f1f1;
+}
+
+.full-screen-menu .close-btn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+}
+
+@media screen and (max-width: 768px) {
+    .desktop-nav {
+        display: none;
+    }
+
+    .menu-icon {
+        display: block;
+    }
 }
