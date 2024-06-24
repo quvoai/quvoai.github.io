@@ -194,6 +194,7 @@ h2 {
 
 .contact-form {
     flex: 1;
+    width: 100%; /* Ensure it takes full width of its container */
 }
 
 .contact-form .form-group {
@@ -269,6 +270,32 @@ button[type="submit"]:hover {
     }
 
     .contact-form .name-fields .form-group {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .contact-content {
+        flex-direction: column;
+        width: 100%; /* Full width on mobile */
+    }
+
+    .contact-form {
+        width: 95%; /* Set to 95% of the screen width */
+        margin: 0 auto; /* Center the form */
+    }
+
+    .contact-form .name-fields {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .contact-form .name-fields .form-group {
+        width: 100%; /* Full width for name fields */
+    }
+
+    .contact-form input,
+    .contact-form textarea {
         width: 100%;
     }
 }
