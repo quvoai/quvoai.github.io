@@ -18,6 +18,7 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
+domain: "quvo.ai"
 baseurl: "/blog"
 url: "https://quvo.ai"
 title: "QUVO AI Blog"
